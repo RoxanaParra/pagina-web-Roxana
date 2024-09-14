@@ -16,7 +16,7 @@ body, html {
     color: white;
     text-align: center;
     position: relative;
-    z-index: 1;
+    z-index: 0;
 }
 
 .overlay {
@@ -168,5 +168,9 @@ p {
 .custom-text {
     font-size: 1rem; /* Tamaño de la fuente del texto */
     color: #000000b2; /* Color del texto */
+}
+
+.sectionPadding {
+    padding: 50px;
 }
 

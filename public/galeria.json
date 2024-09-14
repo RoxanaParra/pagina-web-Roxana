@@ -1,0 +1,10 @@
+{
+    "imagen1": {
+        "nombre": "imagen1",
+        "url": "https://via.placeholder.com/150"
+    },
+    "imagen2": {
+        "nombre": "imagen2",
+        "url": "https://via.placeholder.com/150"
+    }
+}
