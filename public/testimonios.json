@@ -1,0 +1,27 @@
+{
+    "cliente1": {
+      "titulo": "Maria Sanchez",
+      "cuerpo": "¡Increíble! Pedí un cojín personalizado con la foto de mi familia y fue el regalo perfecto. La calidad de impresión fue excelente y la atención al cliente insuperable.",
+      "imagen": "public/imagenes/maria.jpg",
+      "fecha": "2024-09-07"
+    },
+    "cliente2": {
+      "titulo": "Pedro Sánchez",
+      "cuerpo": "Pedí un calendario personalizado como regalo de aniversario y mi pareja quedó fascinada. ¡La calidad y los detalles superaron nuestras expectativas!",
+      "imagen": "public/imagenes/pedro.jpg",
+      "fecha": "2024-09-07"
+    },
+
+    "cliente3": {
+      "titulo": "Isabel Rodriguez",
+      "cuerpo": "Encargué unas tazas personalizadas para el equipo de trabajo y a todos les encantaron. El proceso fue rápido y sencillo, ¡volveré a comprar sin duda!",
+      "imagen": "public/imagenes/isabel.jpg",
+      "fecha": "2024-09-07"
+    },
+    "cliente4": {
+      "titulo": "Carlos Gutierrez",
+      "cuerpo": "Los llaveros personalizados que pedí fueron el detalle perfecto para mi boda. La grabación quedó preciosa y la entrega fue muy puntual.",
+      "imagen": "public/imagenes/carlos.jpg",
+      "fecha": "2024-09-07"
+    }
+  }

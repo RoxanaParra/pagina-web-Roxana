@@ -1,0 +1,172 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+    height: 100%;
+}
+
+.banner {
+    background-image: url(../imagenes/portada3.jpg); 
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+}
+
+h1 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 6em;
+    margin-bottom: 20px;
+    color:aliceblue;
+}
+
+p {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+}
+
+.btn {
+    padding: 15px 30px;
+    font-size: 1.2em;
+    color: white;
+    background-color: #ca53c0;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #a23e93;
+}
+
+/*Estilos para la barra de navegación*/
+
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*Estilos para los titulos*/
+
+.text-center {
+    color: #c353b4;
+    font-size: x-large;
+}
+
+/*Estilos para los Productos*/
+
+#noticiasContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Ajusta el espacio entre las imágenes */
+    margin-top: 10px;
+    padding: 10px; /* Puedes combinar todos los paddings en una sola línea */
+}
+
+.card-tittle {
+    background-color: hsla(300, 100%, 91%, 0.887);
+    padding: 20px;
+    margin: 10px;
+    border-radius: 8px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(250, 194, 255, 0.367);
+    justify-content: center;
+    text-align: center;
+    margin: 0 - 10px;
+}
+
+.card-img-top {
+    justify-content: center;
+    height: 150px; /* Establece una altura fija para las imágenes */
+    object-fit: cover; /* Asegura que la imagen mantenga proporción dentro del contenedor */
+}
+
+.card-text {
+    font-size: 1rem;
+    color: #000000;
+}
+
+/* Estilos básicos para la sección "About Us" */
+#about-us {
+    background-color: #f7f7f7;
+    padding: 50px 20px;
+    text-align: justify;
+}
+
+#about-us h2 {
+    font-size: 2.5rem;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#about-us p {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/*Estilos de los Testimonios*/
+
+.custom-card {
+    justify-content: center;
+    align-items: center;
+    background-color: #fffcec; /* Cambia el color de fondo de la tarjeta */
+    box-shadow: 0 4px 8px rgba(82, 50, 81, 0.652); /* Sombra para las tarjetas */
+}
+
+.custom-img {
+    justify-content: center;
+    height: 150px; /* Establece una altura fija para las imágenes */
+    object-fit: cover; /* Asegura que la imagen mantenga proporción dentro del contenedor */
+}
+
+.custom-card-body {
+    margin-left: 10;
+    justify-items: center;
+
+}
+
+.custom-title {
+    font-size: 1.5rem; /* Ajusta el tamaño de la fuente */
+    color: #0b0b0b; /* Color del título */
+}
+
+.custom-text {
+    font-size: 1rem; /* Tamaño de la fuente del texto */
+    color: #000000b2; /* Color del texto */
+}
+

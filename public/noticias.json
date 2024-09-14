@@ -1,0 +1,51 @@
+{
+    "producto1": {
+      "titulo": "Taza Personalizada",
+      "cuerpo": "Taza de cerámica con diseño personalizado. Perfecta para regalar en cualquier ocasión especial.",
+      "imagen": "public/imagenes/taza_personalizada.jpg",
+      "fecha": "2024-09-07"
+    },
+    "producto2": {
+      "titulo": "Calendario Personalizado",
+      "cuerpo": "Calendario de pared con fotos personalizadas para cada mes. Ideal para tener recuerdos todo el año.",
+      "imagen": "public/imagenes/calendario_personalizado.jpg",
+      "fecha": "2024-09-07"
+    },
+    "producto3": {
+      "titulo": "Esfera de Navidad",
+      "cuerpo": "Esfera navideña con grabado personalizado. Un detalle único para adornar tu árbol de Navidad.",
+      "imagen": "public/imagenes/esfera_personalizada.jpg",
+      "fecha": "2024-09-07"
+    },
+    "producto4": {
+      "titulo": "Cojín Personalizado",
+      "cuerpo": "Cojín suave con impresión de una foto o diseño personalizado. Perfecto para decorar cualquier espacio.",
+      "imagen": "public/imagenes/cojin_foto.jpg",
+      "fecha": "2024-09-07"
+    },
+    "producto5": {
+      "titulo": "Tarta Personalizada",
+      "cuerpo": "Tarta con diseño personalizado y mensaje especial en la decoración. Ideal para celebraciones.",
+      "imagen": "public/imagenes/tarta_personalizada.jpg",
+      "fecha": "2024-09-07"
+    },
+    "producto6": {
+    "titulo": "Llaveros Personalizados",
+    "cuerpo": "Llaveros de metal con grabado personalizado. Un regalo práctico y significativo.",
+    "imagen": "public/imagenes/llaveros.jpg",
+    "fecha": "2024-09-07"
+    },
+    "producto7": {
+    "titulo": "Lapices Personalizados",
+    "cuerpo": "Lapices con grabado personalizado. Ideal como detalle de empresa o regalo promocional.",
+    "imagen": "public/imagenes/lapices.jpg",
+    "fecha": "2024-09-07"
+    },
+    "producto8": {
+    "titulo": "Almohada Personalizada",
+    "cuerpo": "Almohada suave con un diseño o mensaje personalizado. Perfecto para descansar con estilo.",
+    "imagen": "public/imagenes/Almohadas.jpg",
+    "fecha": "2024-09-07"
+    }
+  }
+
