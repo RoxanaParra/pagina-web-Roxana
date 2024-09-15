@@ -31,9 +31,6 @@ function mostrarnoticias() {
     })
 }
 
-obtenernoticiasdelJson()
-mostrarnoticias()
-
 function obtenerTestimoniosdelJson() {
     return fetch('public/testimonios.json')
         .then(response => response.json())
@@ -66,7 +63,10 @@ function mostrarTestimonios() {
     })
 }
 
+obtenernoticiasdelJson()
+mostrarnoticias()
 obtenerTestimoniosdelJson()
 mostrarTestimonios()
+
 
     
