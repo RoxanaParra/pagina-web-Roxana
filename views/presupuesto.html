@@ -54,29 +54,31 @@
                                 <div class="mb-3">
                                     <label for="producto" class="form-label"> Selecciona tus detalle favoritos: </label>
                                     <select class="form-select" id="producto" name="producto">
-                                        <option value="0"> Elige tus detalles </option>
-                                        <option value="6,50€"> Tazas - 6,50€ </option>
-                                        <option value="15€"> Calendarios - 10€ </option>
-                                        <option value="7,99€"> Esferas - 7,99€ </option>
-                                        <option value="10,99€"> Cojines - 10,99€ </option>
-                                        <option value="65€"> Tartas - 65€ </option>
-                                        <option value="14,95€"> llaveros - 14,95€ </option>
-                                        <option value="22,50€"> Lapices y agendas - 22,50€ </option>
-                                        <option value="20,50€"> Almohadas - 20,50€ </option>
+                                        <option value="0" selected="selected"> Elige tus detalles </option>
+                                        <option value="6.50"> Tazas - 6,50€ </option>
+                                        <option value="10"> Calendarios - 10€ </option>
+                                        <option value="7.99"> Esferas - 7,99€ </option>
+                                        <option value="10.99"> Cojines - 10,99€ </option>
+                                        <option value="65"> Tartas - 65€ </option>
+                                        <option value="14.95"> llaveros - 14,95€ </option>
+                                        <option value="22.50"> Lapices y agendas - 22,50€ </option>
+                                        <option value="20.50"> Almohadas - 20,50€ </option>
                                     </select>
+                                    <span id="errorProducto" class="error"></span>
                                 </div>  
                                 <div class="mb-3">
                                     <label for="plazo" class="form-label"> Plazo (en meses): </label>
-                                    <input type="number" class="form-control" id="plazo" name="plazo" min="0" placeholder="Introduce un plazo">
+                                    <input type="number" step="1" class="form-control" id="plazo" name="plazo" min="0" placeholder="Introduce un plazo">
+                                    <span id="errorPlazo" class="error"></span>
                                 </div>
                                 <div class="mb-3">
                                     <label for="form-label">Extras que puedes agregar: </label>
                                     <div class="form-check"> 
-                                        <input class="form-check-input" type="checkbox" id="extra1" value="4,99">
+                                        <input class="form-check-input" type="checkbox" id="extra1" value="4.99">
                                         <label for="form-label" for="extra1"> Taza con fotos - 4,99€ </label>
                                     </div>
                                     <div class="form-check"> 
-                                        <input class="form-check-input" type="checkbox" id="extra2" value="3,20">
+                                        <input class="form-check-input" type="checkbox" id="extra2" value="3.20">
                                         <label for="form-label" for="extra2"> Esfera con pegatinas de nombres - 3,20€ </label>
                                     </div>
                                     <div class="form-check"> 
@@ -84,11 +86,11 @@
                                         <label for="form-label" for="extra3"> Tarta con fotos comestibles - 10€ </label>
                                     </div>
                                     <div class="form-check"> 
-                                        <input class="form-check-input" type="checkbox" id="extra4" value="8,80">
+                                        <input class="form-check-input" type="checkbox" id="extra4" value="8.80">
                                         <label for="form-label" for="extra4"> Personalización de agendas con fotos y pegatinas - 8,80€ </label>
                                     </div>
                                     <div class="form-check"> 
-                                        <input class="form-check-input" type="checkbox" id="extra5" value="4,50">
+                                        <input class="form-check-input" type="checkbox" id="extra5" value="4.50">
                                         <label for="form-label" for="extra5"> Llaveros con fotos - 4,50€ </label>
                                     </div>
                                 </div>
@@ -98,7 +100,7 @@
                         <!--Precio Final-->
                         <div class="mb-3">
                             <label for="presupuestoFinal" class="form-label"> ¡Precio Final! </label>
-                            <div id="presupuestoFinal" class="presupuesto" placeholder="0€"> 0€ </div>
+                            <div id="presupuestoFinal" class="presupuesto"> 0€ </div>
                         </div>
                         <!--Condiciones y estilo de botones-->
                         <div class="mb-3 form-check">

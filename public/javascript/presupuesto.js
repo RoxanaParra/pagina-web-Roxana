@@ -5,8 +5,9 @@ function validarFormulario()
     const apellidos = document.getElementById ('apellidos');
     const telefono = document.getElementById ('telefono');
     const email = document.getElementById ('email');
-    const condiciones = document.getElementById ('condiciones'); //Para saber si el checkbox está marcado o no
     const enviarFormulario = document.getElementById('enviarFormulario');
+    const productoSeleccionado = document.getElementById('producto');
+    const plazoSeleccionado = document.getElementById('plazo');
 
     //Regex para validaciones de los formatos especificados
     const regexNombre = /^[a-zA-ZÀ-ÿ\u00f1\u00d1\s]{1,15}$/; //Para la comprobación de letras y espacios
@@ -22,6 +23,8 @@ function validarFormulario()
     document.getElementById ('errorEmail').textContent = "";
 
     let esValido = false;
+    let valorAcumulado = 0;
+    let precioFinal = 0;
 
     //Validaciones
     nombre.addEventListener('input', function() {
@@ -90,11 +93,77 @@ function validarFormulario()
 
     })
 
+    productoSeleccionado.addEventListener('change', function () {
+        const producto = this.value;
+        const options = this.options;
+
+        let valorDelProducto = 0;
+        
+        for (let i = 0; i < options.length; i++) {
+            if (options[i].value === producto) {
+                options[i].setAttribute('selected', 'selected');
+
+                valorDelProducto = parseFloat(options[i].value);
+            } else {
+                options[i].removeAttribute('selected');
+            }
+        }
+
+    
+        if (valorDelProducto === 0) {
+            document.getElementById('errorProducto').textContent = "Debes seleccionar un producto.";
+
+            esValido = false;
+
+            return;
+        }
+
+        valorAcumulado = valorDelProducto;
+        esValido = true;
+
+        return
+    });
+
+    plazoSeleccionado.addEventListener('change', function () {
+        const plazo = parseInt(this.value);
+
+        if (plazo === "" || isNaN(plazo)) {
+            document.getElementById('errorPlazo').textContent = "Debes seleccionar un plazo.";
+
+            esValido = false;
+            return;
+        }
+
+        esValido = true;
+
+        return
+    });
+
+    
+    window.addEventListener('change', function () {
+        precioFinal = calcularPresupuesto(valorAcumulado, plazoSeleccionado.value);
+        
+        if(precioFinal !== 0) {
+            this.document.getElementById('presupuestoFinal').innerHTML = `${precioFinal.toFixed(2)} €`;
+        }
+
+        return; 
+    });
 
     enviarFormulario.addEventListener('click', function (event) {
         let estaSeleccionado = document.getElementById ('condiciones').checked;
+        let productos = productoSeleccionado.options
+        let productoPorDefecto = false;
 
-        if(!esValido && !estaSeleccionado) {
+        for (let i = 0; i < productos.length; i++) {
+            if (productos[i].selected && productos[i].value === "0") {
+                productoPorDefecto = true;
+                break;
+               
+            }
+        }
+
+        if(! esValido || ! estaSeleccionado || productoPorDefecto) {
             event.preventDefault();
 
             alert('Errores de validacion');
@@ -106,30 +175,40 @@ function validarFormulario()
     return;
 }
 
-function calcularPresupuesto() 
+function calcularPresupuesto(valor, plazo) 
 {
-    let total = 0;
+    const extra1 = document.getElementById('extra1');
+    const extra2 = document.getElementById('extra2');
+    const extra3 = document.getElementById('extra3');
+    const extra4 = document.getElementById('extra4');
+    const extra5 = document.getElementById('extra5');
 
-    // Obtener el precio del producto
-    const producto = parseInt(document.getElementById('producto').value);
-    if (!isNaN(producto)) total += producto;
 
-    // Obtener el plazo (descuento del 5% por cada mes adicional)
-    const plazo = parseInt(document.getElementById('plazo').value);
-    if (!isNaN(plazo) && plazo > 1) {
-        total -= total * ((plazo - 1) * 0.05);
+    if (extra1.checked) {
+        valor += parseFloat(extra1.value);
     }
 
-    // Sumar extras
-    const extra1 = document.getElementById('extra1').checked ? parseInt(document.getElementById('extra1').value) : 0;
-    const extra2 = document.getElementById('extra2').checked ? parseInt(document.getElementById('extra2').value) : 0;
-    const extra3 = document.getElementById('extra3').checked ? parseInt(document.getElementById('extra3').value) : 0;
+    if (extra2.checked) {
+        valor += parseFloat(extra2.value);
+    }
 
-    total += extra1 + extra2 + extra3;
+    if (extra3.checked) {
+        valor += parseFloat(extra3.value);
+    }
 
-    // Actualizar el presupuesto final
-    document.getElementById('presupuestoFinal').textContent = `$${total.toFixed(2)}`;
+    if (extra4.checked) {
+        valor += parseFloat(extra4.value);
+    }
+
+    if (extra5.checked) {
+        valor += parseFloat(extra5.value);
+    }
+
+    if(plazo > 0 && plazo <= 3) {
+        valor = valor - (valor * 0.05);
+    }
+
+    return valor;
 }
 
 validarFormulario()
-calcularPresupuesto()
