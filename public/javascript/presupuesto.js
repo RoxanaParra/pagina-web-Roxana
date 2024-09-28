@@ -98,7 +98,7 @@ function validarFormulario()
         const options = this.options;
 
         let valorDelProducto = 0;
-        
+
         for (let i = 0; i < options.length; i++) {
             if (options[i].value === producto) {
                 options[i].setAttribute('selected', 'selected');
@@ -107,15 +107,6 @@ function validarFormulario()
             } else {
                 options[i].removeAttribute('selected');
             }
-        }
-
-    
-        if (valorDelProducto === 0) {
-            document.getElementById('errorProducto').textContent = "Debes seleccionar un producto.";
-
-            esValido = false;
-
-            return;
         }
 
         valorAcumulado = valorDelProducto;
@@ -143,10 +134,8 @@ function validarFormulario()
     window.addEventListener('change', function () {
         precioFinal = calcularPresupuesto(valorAcumulado, plazoSeleccionado.value);
         
-        if(precioFinal !== 0) {
-            this.document.getElementById('presupuestoFinal').innerHTML = `${precioFinal.toFixed(2)} €`;
-        }
-
+        this.document.getElementById('presupuestoFinal').innerHTML = `${precioFinal.toFixed(2)} €`;
+        
         return; 
     });
 
@@ -170,6 +159,9 @@ function validarFormulario()
             
             return
         }
+
+
+        alert('Formulario enviado correctamente');
     })
 
     return;
@@ -230,7 +222,5 @@ if (!isNaN(plazo) && plazo > 0) {
     // Aplicar el descuento al total
     total -= total * descuento;
 }
-
-
 
 validarFormulario()
