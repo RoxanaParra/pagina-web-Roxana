@@ -23,7 +23,7 @@ function mostrarnoticias() {
                         <div class="card-body">
                             <h5 class="card-tittle">${producto.titulo}</h5>
                             <p class="card-text">${producto.cuerpo}</p>
-                            <a href="#" class="btn btn-primary">Comprar</a>
+                            <a href="#" class="btn">Comprar</a>
                         </div>
                     </div>
                 </div>`
@@ -50,7 +50,7 @@ function mostrarTestimonios() {
 
         Object.values(data).forEach(cliente => {
             testimoniosContainer.innerHTML +=
-                `<div class= "col-lg-4 col-md-6 col-sm-12 my-3">
+                `<div class= "col">
                     <div class="card custom-card" style="width: 18rem;">
                         <img src=${cliente.imagen} class="custom-img" alt="...">
                         <div class="custom-card-body">

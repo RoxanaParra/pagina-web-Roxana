@@ -58,7 +58,9 @@ p {
     cursor: pointer;
     transition: background-color 0.3s;
     text-align: center;
-    
+    border-radius: 10px; /* Redondear bordes */
+    padding: 10px 20px; /* Ajustar padding */
+    font-size: 1.2rem; /* Ajustar tamaño de texto */
 }
 
 .btn:hover {
@@ -188,13 +190,7 @@ p {
     object-fit: cover; /* Ajusta la imagen para que se recorte y se ajuste bien dentro de su contenedor */
 }
 
-/*Estilos para el botón de VER imagen y la clase card*/
-
-.custom-btn {
-    border-radius: 10px; /* Redondear bordes */
-    padding: 10px 20px; /* Ajustar padding */
-    font-size: 1.2rem; /* Ajustar tamaño de texto */
-}
+/*Estilos para la clase card*/
 
 .card {
     border: none;
