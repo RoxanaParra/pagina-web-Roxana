@@ -61,6 +61,16 @@ p {
     
 }
 
+.btn-secondary {
+    background-color: #63144b;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-align: center;
+}
+
 .btn:hover {
     background-color: #a23e93;
 }
@@ -214,6 +224,17 @@ p {
 
 .espacioEntreElementosDelPresupuesto {
     margin-bottom: 35px;
+}
+
+.estilosCalcularRuta {
+    padding-top: 20px;
+}
+
+.footer {
+    background-color: #a23e93;
+    color: white;
+    padding: 20px;
+    text-align: center;
 }
 
 
