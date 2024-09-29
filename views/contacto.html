@@ -13,36 +13,40 @@
         <div id="navbar"></div>
 
         <section id="contacto">
-            <div class="container text-center">
+            <div class="container">
                 <div class="row">
-                  <div class="col">
-                    <div>
-                        <h1> Visitanos en: </h1>
-                        <label class="texto1"> Dirección: </label><label> Calle Gran Via, 46</label> <br><br>
-                        <label class="Codigo postal"> Codigo Postal: </label><label> 28005 </label> <br><br>
-                        <label class="Telefono"> Telefono: </label><label> +34 614587459 / +34 911458756 </label> <br><br>
-                        <label class="Email"> Email: </label><label> creatusmomentos@gmail.com </label> <br><br>
+                    <div class="col-sm-6 mb-3 mb-sm-0">
+                      <div class="card">
+                        <div class="card-body">
+                          <h5 class="card-title">Visitanos en</h5>
+                          <p class="card-text">Calle Gran Vía 46, 280055 Madrid</p>
+                          <a href="#" class="btn btn-primary">Copiar Dirección</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="card">
+                        <div class="card-body">
+                          <h5 class="card-title">Special title treatment</h5>
+                          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                  <div class="col">
-                    <div>
-                        <h1> Visitanos en: </h1>
-                        <label class="texto1"> Dirección: </label><label> Calle Gran Via, 46</label> <br><br>
-                        <label class="Codigo postal"> Codigo Postal: </label><label> 28005 </label> <br><br>
-                        <label class="Telefono"> Telefono: </label><label> +34 614587459 / +34 911458756 </label> <br><br>
-                        <label class="Email"> Email: </label><label> creatusmomentos@gmail.com </label> <br><br>
-                    </div>
-                  </div>
-                </div>
               </div>
-            <div>
-                <label for="ubicacionCliente">Tu ubicación:</label>
-                <input type="text" id="ubicacionCliente" placeholder="Introduce tu ciudad o dirección">
-                <button type="button" onclick="calcularRuta()">Calcular Ruta</button>
-            </div>
+        </section>
 
-                <div id="map"></div>
+        <section id="mapa">
+            <div class="container">
+                <div class="input-group mb-3 estilosCalcularRuta">
+                    <input type="text" class="form-control" id="ubicacionCliente" placeholder="Introduce tu ciudad o dirección">
+                    <button class="btn btn-outline-secondary" type="button" onclick="calcularRuta()">Calcular Ruta</button>
+                    <button class="btn btn-secondary" type="button" onclick="limpiarRuta()">Limpiar Ruta</button>
+                </div>
             </div>
+        
+            
+            <div id="map"></div>
         </section>
         
         
