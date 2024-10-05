@@ -1,14 +1,14 @@
 function renderizarNavbar() {
     let rutas = {
         index: 'index.html',
-        galeria : 'views/galeria.html',
-        presupuesto : 'views/presupuesto.html',
+        galeria: 'views/galeria.html',
+        presupuesto: 'views/presupuesto.html',
         contacto: 'views/contacto.html'
     }
 
-    let rutaLogo = 'public/imagenes/logo.png'
+    let rutaLogo = 'public/imagenes/logo.png';
 
-    const navbar = document.getElementById('navbar')
+    const navbar = document.getElementById('navbar');
 
     const location = window.location.pathname;
 
@@ -19,28 +19,27 @@ function renderizarNavbar() {
     if (checarSiEsViews) {
         rutas = {
             index: '../index.html',
-            galeria : 'galeria.html',
-            presupuesto : 'presupuesto.html',
+            galeria: 'galeria.html',
+            presupuesto: 'presupuesto.html',
             contacto: 'contacto.html'
         }
 
-        rutaLogo = '../public/imagenes/logo.png'
+        rutaLogo = '../public/imagenes/logo.png';
     }
 
     navbar.innerHTML =
-        `<nav class="navbar navbar-expand-lg bg-light">
-                <div>
-                    <a class="navbar-brand" href="#">
-                        <img src="${rutaLogo}" alt="Bootstrap" width="100" height="100">
-                    </a>
-                </div>
+        `<nav class="navbar navbar-expand-lg bg-light navbar-fixed">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="${rutaLogo}" alt="Logo" width="100" height="100">
+                </a>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item active">
-                            <a class="nav-link" href="${rutas.index}">Inicio</a>
+                            <a class="nav-link active" href="${rutas.index}">Inicio</a>
                         </li>
                         <li class="nav-item active">
-                            <a class="nav-link" href="${rutas.galeria}">Galeria</a>
+                            <a class="nav-link" href="${rutas.galeria}">Galería</a>
                         </li>
                         <li class="nav-item active">
                             <a class="nav-link" href="${rutas.presupuesto}">Presupuesto</a>
@@ -50,7 +49,8 @@ function renderizarNavbar() {
                         </li>
                     </ul>
                 </div>
-        </nav>`
+            </div>
+        </nav>`;
 }
 
 renderizarNavbar();

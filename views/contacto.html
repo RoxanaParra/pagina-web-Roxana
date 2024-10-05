@@ -10,25 +10,32 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 </head>
     <body>
-        <div id="navbar"></div>
+      <div id="navbar" class="nav">
+    
+      </div>
 
         <section id="contacto">
             <div class="container">
+              <h1 class="text-center" style="margin-top: 150px;">Contacto</h1>
                 <div class="row">
                     <div class="col-sm-6 mb-3 mb-sm-0">
                       <div class="card">
                         <div class="card-body">
-                          <h5 class="card-title">Visitanos en</h5>
-                          <p class="card-text">Calle Gran Vía 46, 280055 Madrid</p>
-                          <a href="#" class="btn btn-primary">Copiar Dirección</a>
+                          <h5 class="card-title"><strong>Visitanos en</strong></h5>
+                          <p id="direccion" class="card-text">Calle Gran Vía 46, 28055 Madrid</p>
+                          <a href="#" class="btn btn-primary" onclick="copiarDireccion()">Copiar Dirección</a>
                         </div>
                       </div>
                     </div>
                     <div class="col-sm-6">
                       <div class="card">
                         <div class="card-body">
-                          <h5 class="card-title">Special title treatment</h5>
-                          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                          <h5 class="card-title"> <strong>¡Animate y crea Momentos con nosotros!</strong></h5>
+                          <p class="card-text">En "Crea tus Momentos" estamos encantados de ayudarte a crear regalos personalizados y únicos para cualquier ocasión especial.</p>
+                          <p class="card-text"> Puedes encontrarnos en nuestra página web: <strong>"www.creatusmomentos.com"</strong> donde encontratás una amplia variedad de productos y diseños para elegir.<br>
+                            A través de nuestro número de contacto: <strong> +34 624 685 421 </strong> <br>
+                            Y si lo prefieres, a tráves de nuestro correo electrónico:  <strong>info@creatusmomentos.com</strong>
+                          </p>
                         </div>
                       </div>
                     </div>
@@ -47,7 +54,10 @@
         
             
             <div id="map"></div>
+            <br><br>
         </section>
+
+        <div id="footer"></div>
         
         
         <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
@@ -56,5 +66,7 @@
         <script src="../public/javascript/mapaUtil.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
         <script src="../public/javascript/navbarUtil.js"> </script>
+        <script src="../public/javascript/footer.js"></script>
+        <script src="../public/javascript/direccion.js"></script>
     </body>
 </html>
