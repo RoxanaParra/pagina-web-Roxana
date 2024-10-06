@@ -9,9 +9,10 @@
             <link rel="stylesheet" href="../public/css/estilos.css">
         </head>
         <body>
-            <div id="navbar" class="nav">
 
-            </div>
+        <!--El siguiente div define un contenedor preparado para albergar una barra de navegación, 
+        esté div puede ser manipulado a través de Javascript-->
+            <div id="navbar" class="nav"></div>
             <div class="container mt-5">
                 <h1 class="text-center mb-4" style="margin-top: 140px;"> Presupuesto de Productos</h1>
                 <form id="presupuestoForm">
@@ -47,12 +48,13 @@
                     
                     <!--Segunda parte del Presupuesto-->
                     <div class="card espacioEntreElementosDelPresupuesto">
+                        <!--Se crea un encabezado dentro de la tarjeta (card-header)-->
                         <div class="card-header">
                             <h2> Precio de Productos </h2>
                         </div>
                         <div class="card-body">
                             <div class="mb-3">
-                                <label for="producto" class="form-label"> Selecciona tus detalle favoritos: </label>
+                                <label for="producto" class="form-label"> Selecciona tus detalles favoritos: </label>
                                 <select class="form-select" id="producto" name="producto">
                                     <option value="0" selected="selected"> Elige tus detalles </option>
                                     <option value="6.50"> Tazas - 6,50€ </option>
@@ -99,21 +101,28 @@
                     
                     <!--Precio Final-->
                     <div class="mb-3">
-                        <label for="presupuestoFinal" id="form-label"> ¡Precio Final! </label>
-                        <div id="presupuestoFinal" class="presupuesto"> 0€ </div>
+                        <label for="presupuestoFinal" class="form-label"> ¡Precio Final! </label>
+                        <input type="text" id="presupuestoFinal" class="presupuestoFinal" value="0€" readonly>
                     </div>
                     
                     <!--Condiciones y estilo de botones-->
                     <div class="mb-3 form-check">
+                        <!--Este input aplica los estilos visuales de la casilla de verificación 
+                        y el id permite asociarlo a la etiqueta correspondiente-->
                         <input type="checkbox" class="form-check-input" id="condiciones">
+                        <!-- Etiqueta que presenta el texto junto al checkbox. El atributo 'for' 
+                        vincula el label con el input mediante su 'id', lo que permite marcar el checkbox al hacer clic en el texto. -->
                         <label class="form-check-label" for="condiciones">Acepto las condiciones de privacidad</label>
                     </div>
                     <button type="submit" class="btn btn-primary" id="enviarFormulario"> Enviar </button>
-                    <button type="reset" class="btn btn-secundary"> Resetear </button> <br><br>
+                    <button type="reset" class="btn btn-secundary" id="limpiarFormulario"> Resetear </button> <br><br>
                 </form>
             </div>
+
+            <!---Se define un div que alberga el footer, es manipulado a través de un archivo de Javascript-->
             <div id="footer"></div>
-            
+    
+            <!--Se agregan los enlaces de Bootstrap y Javascript necesarios para llamar a las funcionalidades de la pagina-->
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
             crossorigin="anonymous"></script>
