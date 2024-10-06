@@ -87,6 +87,10 @@ p {
     box-shadow: 0px 4px 2px -2px gray; /* Añadir una sombra para hacerla destacada */
 }
 
+.nav-link.active {
+    font-weight: bold;
+}
+
 
 /*Estilos para los titulos*/
 
