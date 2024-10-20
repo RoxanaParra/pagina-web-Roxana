@@ -43,6 +43,10 @@ function calcularRuta() {
             map.fitBounds(ruta.getBounds());
         }, error => {
             console.error("Error obteniendo la ubicación: ", error);
+        }, {
+            enableHighAccuracy: true,
+            timeout: 5000,
+            maximumAge: 0
         });
     } else {
         console.error("Geolocalización no disponible");
