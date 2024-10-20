@@ -13,29 +13,45 @@ var marker = L.marker([40.416775, -3.703790]).addTo(map)
 
 // Función para calcular la ruta (utilizando geocodificación)
 function calcularRuta() {
-    var ubicacionCliente = document.getElementById('ubicacionCliente').value;
 
-    // Geocodificación para convertir la dirección en coordenadas
-    var geocoder = L.Control.Geocoder.nominatim();
-    geocoder.geocode(ubicacionCliente, function(results) {
-        if (results.length > 0) {
-            var clienteCoordenadas = results[0].center;
+    let coordinates = {
+        lat:0, 
+        lng: 0
+    };
+
+    // Obtener la ubicación del cliente por defecto del navegador
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(position => {
+            coordinates.lat = position.coords.latitude;
+            coordinates.lng = position.coords.longitude;
+            console.log(`Latitude: ${coordinates.lat}, Longitude: ${coordinates.lng}`);
 
             // Añadir un marcador en la ubicación del cliente
-            L.marker(clienteCoordenadas).addTo(map)
-                .bindPopup('Tu ubicación: ' + ubicacionCliente)
+            L.marker([coordinates.lat, coordinates.lng]).addTo(map)
+                .bindPopup('Cliente')
+                .openPopup();
+
+            // Añadir un marcador en la ubicación de Madrid
+            L.marker([40.416775, -3.703790]).addTo(map)
+                .bindPopup('Madrid')
                 .openPopup();
 
             // Dibujar una línea entre la ubicación del negocio y la del cliente
-            var ruta = L.polyline([marker.getLatLng(), clienteCoordenadas], { color: 'blue' }).addTo(map);
+            var ruta = L.polyline([[40.416775, -3.703790], [coordinates.lat, coordinates.lng]], { color: 'blue' }).addTo(map);
 
             // Ajustar el zoom para ver ambas ubicaciones
             map.fitBounds(ruta.getBounds());
-        } else {
-            alert('No se pudo encontrar la ubicación');
-        }
-    });
+        }, error => {
+            console.error("Error obteniendo la ubicación: ", error);
+        });
+    } else {
+        console.error("Geolocalización no disponible");
+    }
 }
+
+
+calcularRuta();
+
 
 
 
