@@ -18,7 +18,7 @@ function mostrarProductos() {
         Object.values(data).forEach(producto => {
             productosContainer.innerHTML +=
                 `<div class= "col">
-                    <div class="card" style="width: 18rem;">
+                    <div class="card">
                         <img src=${producto.imagen} class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-tittle">${producto.titulo}</h5>

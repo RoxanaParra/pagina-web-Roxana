@@ -58,10 +58,6 @@ body, html {
     margin: auto;
 }
 
-.card:hover {
-    transform: translateY(-10px);
-}
-
 @media screen and (max-width: 768px) {
     .card {
         width: 100%;
@@ -263,7 +259,7 @@ border-radius: 70px;
 }
 
 .sectionPadding {
-    padding: 50px;
+    padding: -50px;
 }
 
 /*Estilos para las imagenes de la pagina de Galeria*/
@@ -320,4 +316,38 @@ border-radius: 70px;
 
 .social-link:hover {
     text-decoration: underline; /* Solo subrayar cuando el cursor pase encima */
+}
+
+.productos-overbanner {
+    max-width: 1200px;
+    margin-top: -300px;
+    margin-left: 18%;
+    padding: 20px;
+}
+
+/* Media queries para pantallas más pequeñas */
+@media screen and (max-width: 768px) {
+    .productos-overbanner {
+        max-width: 100%; /* Ajustar el ancho máximo */
+        margin-top: -150px; /* Ajustar el margen superior */
+        margin-left: 0; /* Eliminar margen izquierdo */
+        padding: 10px; /* Ajustar el padding */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .productos-overbanner {
+        margin-top: -100px; /* Ajustar aún más el margen superior */
+        padding: 5px; /* Reducir el padding */
+    }
+}
+
+/* Media query para pantallas entre 769 y 1770 */
+@media screen and (min-width: 769px) and (max-width: 1770px) {
+    .productos-overbanner {
+        max-width: 70%; /* Ajustar el ancho máximo */
+        margin-top: -180px; /* Ajustar el margen superior */
+        margin-left: 10%; /* Eliminar margen izquierdo */
+        padding: 10px; /* Ajustar el padding */
+    }
 }
