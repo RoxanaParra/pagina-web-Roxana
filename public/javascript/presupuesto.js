@@ -2,10 +2,11 @@ function validarFormulario()
 {
     // Obtener los valores de los campos
     const nombre = document.getElementById('nombre'); 
-    const apellidos = document.getElementById ('apellidos');
-    const telefono = document.getElementById ('telefono');
-    const email = document.getElementById ('email');
+    const apellidos = document.getElementById('apellidos');
+    const telefono = document.getElementById('telefono');
+    const email = document.getElementById('email');
     const enviarFormulario = document.getElementById('enviarFormulario');
+    const limpiarFormulario = document.getElementById('limpiarFormulario');
     const productoSeleccionado = document.getElementById('producto');
     const plazoSeleccionado = document.getElementById('plazo');
 
@@ -15,12 +16,16 @@ function validarFormulario()
     const regexTelefono = /^[0-9]{9}$/; // Para la comprobación de números 
     const regexEmail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/; // Comprobación del campo de Email
 
-
+    function borrarErrores () {
     //Borrar mensajes de error previos 
-    document.getElementById ('errorNombre').textContent = "";
-    document.getElementById ('errorApellidos').textContent = "";
-    document.getElementById ('errorTelefono').textContent = "";
-    document.getElementById ('errorEmail').textContent = "";
+    document.getElementById('errorNombre').textContent = "";
+    document.getElementById('errorApellidos').textContent = "";
+    document.getElementById('errorTelefono').textContent = "";
+    document.getElementById('errorEmail').textContent = "";
+    document.getElementById('errorPlazo').textContent = "";
+    }
+
+    borrarErrores()
 
     let esValido = false;
     let valorAcumulado = 0;
@@ -127,6 +132,8 @@ function validarFormulario()
 
         esValido = true;
 
+        document.getElementById('errorPlazo').textContent = "";
+
         return
     });
 
@@ -134,7 +141,7 @@ function validarFormulario()
     window.addEventListener('change', function () {
         precioFinal = calcularPresupuesto(valorAcumulado, plazoSeleccionado.value);
         
-        this.document.getElementById('presupuestoFinal').innerHTML = `${precioFinal.toFixed(2)} €`;
+        this.document.getElementById('presupuestoFinal').value = `${precioFinal.toFixed(2)} €`;
         
         return; 
     });
@@ -162,7 +169,11 @@ function validarFormulario()
 
 
         alert('Formulario enviado correctamente');
-    })
+    });
+
+    limpiarFormulario.addEventListener('click', function () {
+        borrarErrores()
+    });
 
     return;
 }
