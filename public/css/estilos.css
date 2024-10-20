@@ -1,44 +1,107 @@
 body, html {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #f7f7f7;
     margin: 0;
     padding: 0;
-    font-family: 'Times New Roman', Times, serif;
-    height: 100%;
-    background-color: #f7f7f7;
 }
 
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+/* Estilos del banner */
 .banner {
-    background-image: url(../imagenes/portada3.jpg); 
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    text-align: center;
     position: relative;
-    z-index: 1;
+    height: 100vh;
+    background: url('../imagenes/portada3.jpg') no-repeat center center/cover;
 }
 
-.overlay {
+.banner .overlay {
     position: absolute;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    transition: background 0.5s ease;
 }
 
-.content {
+.banner .content {
     position: relative;
-    z-index: 2;
-    max-width: 800px;
+    z-index: 1;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+}
+
+/* Estilo de transparencia al hacer scroll */
+.transparent {
+    background: rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Caja central de productos */
+#producto .Contenedor {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.card {
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: none;
+    overflow: hidden;
+    transition: transform 0.3 ease;
+    margin: auto;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+@media screen and (max-width: 768px) {
+    .card {
+        width: 100%;
+    }
+}
+
+.tarjeta {
+margin: 50 auto;
+}
+
+/* Estilos de la sección de preguntas frecuentes */
+
+#caja {
+    margin-right: 1000px;
+    margin-left: 50px;
+
+}
+
+.faq-section {
+    padding: 60px 0;
+    background-color: #f9f9f9;
+}
+
+.faq-section h3 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.faq {
+    margin-bottom: 20px;
+}
+
+.faq .question {
+    font-weight: bold;
 }
 
 h1 {
     font-family:'Times New Roman', Times, serif;
     font-size: 6em;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
     color:aliceblue;
 }
 
@@ -77,6 +140,20 @@ p {
     background-color: #a23e93;
 }
 
+.accordion-button {
+    background-color: #a23e93;
+    color: white;
+    font-weight: bold;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #ca53c0;
+}
+
+.accordion-body {
+    background-color: #f9f9f9;
+}
+
 /*Estilos para el navbar*/
 
 .navbar-fixed {
@@ -99,13 +176,12 @@ p {
     font-size: 2.5rem; /* Tamaño de fuente grande */
     font-family:'Times New Roman', Times, serif;
     letter-spacing: 2px; /* Espaciado entre letras */
-    margin-bottom: 20px; /* Espacio debajo del título */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Sombra suave del texto */
 }
 
 /*Estilos para los Productos*/
 
-#noticiasContainer {
+#productosContainer {
     display: flex;
     flex-wrap: wrap;
     gap: 10px; /* Ajusta el espacio entre las imágenes */
@@ -162,43 +238,28 @@ p {
 
 /*Estilos de los Testimonios*/
 
-#testimoniosContainer {
-    display: flex;
-    justify-content: center; /* Alinea las imágenes al centro */
-    gap: 20px; /* Espacio entre las imágenes */
-    width: 100%; /* El ancho del contenedor ocupa el 100% */
-    height: auto; /* Elimina la altura fija */
-    margin-left: 50px;
+.testimonial {
+    background-color: #f1f1f1;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
 }
 
-.custom-card {
-    justify-content: center;
-    align-items: center;
-    background-color: #fcedfc; /* Cambia el color de fondo de la tarjeta */
-    box-shadow: 0 4px 8px rgba(82, 50, 81, 0.652); /* Sombra para las tarjetas */
+.testimonial p {
+    font-style: italic;
 }
 
-.custom-img {
-    justify-content: center;
-    height: 150px; /* Establece una altura fija para las imágenes */
-    object-fit: cover; /* Asegura que la imagen mantenga proporción dentro del contenedor */
+.testimonial .author {
+    font-weight: bold;
+    text-align: right;
 }
 
-.custom-card-body {
-    margin-left: 10;
-    justify-items: center;
-}
-
-.custom-title {
-    text-align: center;
-    font-size: 1.5rem; /* Ajusta el tamaño de la fuente */
-    color: #555; /* Color del título */
-}
-
-.custom-text {
-    text-align: center;
-    font-size: 1rem; /* Tamaño de la fuente del texto */
-    color:#555; /* Color del texto */
+.testimonio {
+width: 130px;
+height: 150px;
+justify-content: center;
+border-radius: 70px;
 }
 
 .sectionPadding {
@@ -215,10 +276,8 @@ p {
     object-fit: cover; /* Ajusta la imagen para que se recorte y se ajuste bien dentro de su contenedor */
 }
 
-/*Estilos para la clase card*/
-
-.card {
-    border: none;
+.galeriacard {
+    width: 16rem;
 }
 
 /*Estilos para el presupuesto*/

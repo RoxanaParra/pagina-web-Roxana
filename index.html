@@ -21,49 +21,112 @@
             <div class="content">
                 <h1>¡Bienvenido a Crea Tus Momentos!</h1>
                 <p>Descubre regalos personalizados únicos para cada ocasión. ¡Haz que cada detalle cuente!</p>
-                <a href="#productos" class="btn">Ver Productos</a>
+                <a href="#productosContainer" class="btn btn-primary">Ver Productos</a>
             </div>
         </div>
 
         <!--Seccion dedicada a la presentación de los productos que se venden en la pagina web-->
-        <section id="productos" class="sectionPadding">
-            <h2 class="text-center">Productos</h2>
-            <div>
-                <div class="Contenedor">
-                    <div class="row" id="noticiasContainer">
+        <section class="services" class="sectionPadding">
+            <div class="container">
+                <h1 class="text-center">Servicios y productos</h1>
+                <div class="card">
+                    <div class="card-body">
+                        <div class="Contenedor">
+                            <p>En "Crea tus momentos" podrás inmortalizar momentos con un toque totalmente personalizado y especial ¡Solo para que lo disfrutes tú y tus seres  más queridos! </p>
+                            <div class="row" id="productosContainer">
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
-
-        <!--Seccion Sobre nosotros-->
-        <section id="about-us">
-            <h2 class="text-center">Sobre Nosotros</h2>
-            <p>
-                En <strong>Crea tus momentos</strong>, nos especializamos en crear regalos personalizados únicos que
-                capturan los momentos más especiales de la vida. Desde tazas y calendarios personalizados hasta cojines y
-                llaveros, cada uno de nuestros productos es diseñado con el mayor cuidado y atención al detalle.
-            </p>
-            <p>
-                Nuestro objetivo es ayudar a nuestros clientes a expresar sus sentimientos a través de regalos
-                significativos que serán recordados para siempre. Con una amplia gama de opciones de personalización,
-                estamos aquí para ayudarte a crear algo verdaderamente especial.
-                <br>
-                ¡No dudes en ponerte en contacto con nosotros para acompañarte en tus momentos especiales!
-                <br>
-            </p>
-        </section>
+        
 
         <!--Seccion de Testimonios-->
-        <section id="clientes" class="sectionPadding">
-            <h3 class="text-center">Testimonios</h3>
-            <div>
-                <div class="Contenedor">
-                    <div class="row" id="testimoniosContainer">
+    <section>
+        <h3 class="text-center">Testimonios</h3>
+        <div>
+            <div class="Contenedor">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="testimonial">
+                            <p>"Los productos son de excelente calidad y el servicio es muy atento. ¡Definitivamente
+                                volveré a comprar!"</p>
+                            <div class="author">- Maria Pérez</div>
+                            <img src="public/imagenes/maria.jpg" class="testimonio"  alt="">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="testimonial">
+                            <p>"¡Me encantó el regalo personalizado que pedí! Llegó a tiempo y quedó tal como lo
+                                quería."</p>
+                            <div class="author">- Carlos Gómez</div>
+                            <img src="public/imagenes/carlos.jpg" class="testimonio" alt="">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="testimonial">
+                            <p>"Gran variedad de productos para todas las ocasiones. ¡Muy recomendados!"</p>
+                            <div class="author">- Isabel Ramírez</div>
+                            <img src="public/imagenes/isabel.jpg" class="testimonio"  alt="">
+                        </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
+        <!-- Sección de preguntas frecuentes -->
+    <section class="faq-section">
+        <h3 class="text-center">Preguntas Frecuentes</h3>
+        <div class="accordion" id="accordionFaq">
+    
+            <!-- Primera Pregunta -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        ¿Cómo personalizo un producto?
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionFaq">
+                    <div class="accordion-body">
+                        Puedes personalizar un producto eligiendo la opción de personalización en la página del producto y siguiendo los pasos indicados.
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Segunda Pregunta -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        ¿Cuánto tiempo tarda en llegar mi pedido?
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionFaq">
+                    <div class="accordion-body">
+                        El tiempo de entrega varía entre 5 a 7 días hábiles, dependiendo de tu ubicación.
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Tercera Pregunta -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        ¿Qué métodos de pago aceptan?
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionFaq">
+                    <div class="accordion-body">
+                        Aceptamos pagos con tarjetas de crédito, débito y PayPal.
+                    </div>
+                </div>
+            </div>
+    
+        </div>
+    </section>
+    
+    
+    </section>
 
         <!---Se define un div que alberga el footer, es manipulado a través de un archivo de Javascript-->
         <div id="footer"></div>
@@ -72,9 +135,10 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-        <script src="public/javascript/utils.js"> </script>
+        <script src="public/javascript/productos.js"> </script>
         <script src="public/javascript/navbarUtil.js"> </script>
         <script src="public/javascript/footer.js"></script>
+        <script src="public/javascript/banner.js"></script>
     </body>
 </html>
 
