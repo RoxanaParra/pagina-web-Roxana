@@ -1,264 +1,371 @@
-body, html {
-    margin: 0;
-    padding: 0;
-    font-family: 'Times New Roman', Times, serif;
-    height: 100%;
-    background-color: #f7f7f7;
-}
+            body, html {
+                font-family: 'Times New Roman', Times, serif;
+                background-color: #f7f7f7;
+                margin: 0;
+                padding: 0;
+            }
 
-.banner {
-    background-image: url(../imagenes/portada3.jpg); 
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    text-align: center;
-    position: relative;
-    z-index: 1;
-}
-
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-}
-
-.content {
-    position: relative;
-    z-index: 2;
-    max-width: 800px;
-}
-
-h1 {
-    font-family:'Times New Roman', Times, serif;
-    font-size: 6em;
-    margin-bottom: 20px;
-    color:aliceblue;
-}
-
-p {
-    font-size: 1.5em;
-    margin-bottom: 30px;
-}
-
-.btn {
-    padding: 15px 30px;
-    font-size: 1.2em;
-    color: white;
-    background-color: #ca53c0;
-    border: none;
-    border-radius: 5px;
-    text-decoration: none;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    text-align: center;
-    border-radius: 10px; /* Redondear bordes */
-    padding: 10px 20px; /* Ajustar padding */
-    font-size: 1.2rem; /* Ajustar tamaño de texto */
-}
-
-.btn-secondary {
-    background-color: #63144b;
-    border: none;
-    border-radius: 5px;
-    text-decoration: none;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    text-align: center;
-}
-
-.btn:hover {
-    background-color: #a23e93;
-}
-
-/*Estilos para el navbar*/
-
-.navbar-fixed {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000; /* Para que la barra esté por encima de otros elementos */
-    box-shadow: 0px 4px 2px -2px gray; /* Añadir una sombra para hacerla destacada */
-}
-
-.nav-link.active {
-    font-weight: bold;
-}
+            .container {
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 20px;
+            }
 
 
-/*Estilos para los titulos*/
+            /* Estilos del banner */
+            .banner {
+                position: relative;
+                height: 100vh;
+                background: url('../imagenes/portada.jpg') no-repeat center center/cover;
+            }
 
-.text-center {
-    color: #c353b4; /* Color rosa */
-    font-size: 2.5rem; /* Tamaño de fuente grande */
-    font-family:'Times New Roman', Times, serif;
-    letter-spacing: 2px; /* Espaciado entre letras */
-    margin-bottom: 20px; /* Espacio debajo del título */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Sombra suave del texto */
-}
+            .banner .overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.6);
+                transition: background 0.5s ease;
+            }
 
-/*Estilos para los Productos*/
+            .banner .content {
+                position: relative;
+                z-index: 1;
+                text-align: center;
+                top: 50%;
+                transform: translateY(-50%);
+                color: white;
+            }
 
-#noticiasContainer {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px; /* Ajusta el espacio entre las imágenes */
-    margin-top: 10px;
-    border-radius: 50px;
-    padding: 10px; /* Puedes combinar todos los paddings en una sola línea */
-    text-align: center;
-}
+            /* Estilo de transparencia al hacer scroll */
+            .transparent {
+                background: rgba(0, 0, 0, 0.3) !important;
+            }
 
-.card-tittle {
-    background-color: hsla(300, 100%, 91%, 0.887);
-    padding: 20px;
-    margin: 10px;
-    border-radius: 8px;
-    width: 250px;
-    text-align: center;
-    box-shadow: 0px 4px 6px rgba(250, 194, 255, 0.367);
-    justify-content: center;
-    text-align: center;
-    margin: 0 - 10px;
-}
+            /* Caja central de productos */
+            #producto .Contenedor {
+                max-width: 900px;
+                margin: 0 auto;
+            }
 
-.card-img-top {
-    justify-content: center;
-    height: 150px; /* Establece una altura fija para las imágenes */
-    object-fit: cover; /* Asegura que la imagen mantenga proporción dentro del contenedor */
-}
+            .card {
+                background-color: white;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                border: none;
+                overflow: hidden;
+                transition: transform 0.3 ease;
+                margin: auto;
+            }
 
-.card-text {
-    font-size: 1rem;
-    color: #555;
-}
+            .productos-overbanner {
+                max-width: 1200px;
+                margin-top: -300px;
+                margin-left: 18%;
+                padding: 20px;
+            }
 
-/* Estilos básicos para la sección "About Us" */
-#about-us {
-    background-color: #f7f7f7;
-    padding: 50px 20px;
-    text-align: justify;
-}
+            /* Media queries para pantallas más pequeñas */
+            @media screen and (max-width: 768px) {
+                .productos-overbanner {
+                    max-width: 100%; /* Ajustar el ancho máximo */
+                    margin-top: -150px; /* Ajustar el margen superior */
+                    margin-left: 0; /* Eliminar margen izquierdo */
+                    padding: 10px; /* Ajustar el padding */
+                }
+            }
 
-#about-us h2 {
-    font-size: 2.5rem;
-    text-align: center;
-    margin-bottom: 20px;
-}
+            @media screen and (max-width: 480px) {
+                .productos-overbanner {
+                    margin-top: -100px; /* Ajustar aún más el margen superior */
+                    padding: 5px; /* Reducir el padding */
+                }
+            }
 
-#about-us p {
-    font-size: 1.2rem;
-    color: #555;
-    line-height: 1.6;
-    max-width: 800px;
-    margin: 0 auto;
-}
+            /* Media query para pantallas entre 769 y 1770 */
+            @media screen and (min-width: 769px) and (max-width: 1770px) {
+                .productos-overbanner {
+                    max-width: 70%; /* Ajustar el ancho máximo */
+                    margin-top: -180px; /* Ajustar el margen superior */
+                    margin-left: 15%; /* Eliminar margen izquierdo */
+                    padding: 10px; /* Ajustar el padding */
+                }
+            }
 
-/*Estilos de los Testimonios*/
+            /* Estilos de la sección de preguntas frecuentes */
 
-#testimoniosContainer {
-    display: flex;
-    justify-content: center; /* Alinea las imágenes al centro */
-    gap: 20px; /* Espacio entre las imágenes */
-    width: 100%; /* El ancho del contenedor ocupa el 100% */
-    height: auto; /* Elimina la altura fija */
-    margin-left: 50px;
-}
+            .faq-section {
+                padding: 60px 0;
+                background-color: #f9f9f9;
+            }
 
-.custom-card {
-    justify-content: center;
-    align-items: center;
-    background-color: #fcedfc; /* Cambia el color de fondo de la tarjeta */
-    box-shadow: 0 4px 8px rgba(82, 50, 81, 0.652); /* Sombra para las tarjetas */
-}
+            .faq-section h3 {
+                text-align: center;
+                margin-bottom: 40px;
+            }
 
-.custom-img {
-    justify-content: center;
-    height: 150px; /* Establece una altura fija para las imágenes */
-    object-fit: cover; /* Asegura que la imagen mantenga proporción dentro del contenedor */
-}
+            .faq {
+                margin-bottom: 20px;
+            }
 
-.custom-card-body {
-    margin-left: 10;
-    justify-items: center;
-}
+            .faq .question {
+                font-weight: bold;
+            }
 
-.custom-title {
-    text-align: center;
-    font-size: 1.5rem; /* Ajusta el tamaño de la fuente */
-    color: #555; /* Color del título */
-}
+            h1 {
+                font-family:'Times New Roman', Times, serif;
+                font-size: 6em;
+                margin-bottom: 50px;
+                color:aliceblue;
+            }
 
-.custom-text {
-    text-align: center;
-    font-size: 1rem; /* Tamaño de la fuente del texto */
-    color:#555; /* Color del texto */
-}
+            p {
+                font-size: 1.5em;
+                margin-bottom: 30px;
+            }
 
-.sectionPadding {
-    padding: 50px;
-}
+            .btn {
+                padding: 15px 30px;
+                font-size: 1.2em;
+                color: white;
+                background-color: #ca53c0;
+                border: none;
+                border-radius: 5px;
+                text-decoration: none;
+                cursor: pointer;
+                transition: background-color 0.3s;
+                text-align: center;
+                border-radius: 10px; /* Redondear bordes */
+                padding: 10px 20px; /* Ajustar padding */
+                font-size: 1.2rem; /* Ajustar tamaño de texto */
+            }
 
-/*Estilos para las imagenes de la pagina de Galeria*/
+            .btn-secondary {
+                background-color: #63144b;
+                border: none;
+                border-radius: 5px;
+                text-decoration: none;
+                cursor: pointer;
+                transition: background-color 0.3s;
+                text-align: center;
+            }
 
-.galeria-img {
+            .btn:hover {
+                background-color: #a23e93;
+            }
 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera */
-    width: 286px; /* Establece un ancho fijo */
-    height: 300px; /* Establece una altura fija */
-    object-fit: cover; /* Ajusta la imagen para que se recorte y se ajuste bien dentro de su contenedor */
-}
+            .accordion-button {
+                background-color:  #b569aa;
+                color: white;
+                font-weight: bold;
+            }
 
-/*Estilos para la clase card*/
+            .accordion-button:not(.collapsed) {
+                background-color: rgb(222, 146, 208);
+            }
 
-.card {
-    border: none;
-}
+            .accordion-body {
+                background-color: #f9f9f9;
+            }
 
-/*Estilos para el presupuesto*/
+            /*Estilos para el navbar*/
 
-.error {
-    color: red;
-    font-size: 12px;
-}
+            .navbar-fixed {
+                position: fixed;
+                top: 0;
+                width: 100%;
+                z-index: 1000; /* Para que la barra esté por encima de otros elementos */
+                box-shadow: 0px 4px 2px -2px gray; /* Añadir una sombra para hacerla destacada */
+            }
 
-.espacioEntreElementosDelPresupuesto {
-    margin-bottom: 35px;
-}
+            .nav-link.active {
+                font-weight: bold;
+            }
 
-.presupuestoFinal {
-    border: none;
-}
 
-.presupuestoFinal:focus {
-    outline: none;
-}
+            /*Estilos para los titulos*/
 
-/*Estilos para el mapa*/
+            .text-center {
+                color: #c353b4; /* Color rosa */
+                font-size: 2.5rem; /* Tamaño de fuente grande */
+                font-family:'Times New Roman', Times, serif;
+                letter-spacing: 2px; /* Espaciado entre letras */
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Sombra suave del texto */
+            }
 
-.estilosCalcularRuta {
-    padding-top: 20px;
-}
+            /*Estilos para los Productos*/
 
-/*Estilos para el Footer*/
-.footer {
-    background-color:rgb(222, 146, 208);
-    color: white;
-    text-align: center;
-    padding: 20px;
-}
+            #productosContainer {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px; /* Ajusta el espacio entre las imágenes */
+                margin-top: 10px;
+                border-radius: 50px;
+                padding: 10px; /* Puedes combinar todos los paddings en una sola línea */
+                text-align: center;
+            }
 
-.social-link {
-    text-decoration: none;
-    color: inherit; /* Para que mantenga el color de la pagina*/
-}
+            .card-header {
+                background-color:rgb(222, 146, 208);
+                color: #fff;
+                padding: 15px;
+                font-size: 1.25rem;
+                font-weight: bold;
+            }
 
-.social-link:hover {
-    text-decoration: underline; /* Solo subrayar cuando el cursor pase encima */
-}
+            .card-tittle {
+                background-color: hsla(300, 100%, 91%, 0.887);
+                padding: 20px;
+                margin: 10px;
+                border-radius: 8px;
+                width: 250px;
+                text-align: center;
+                box-shadow: 0px 4px 6px rgba(250, 194, 255, 0.367);
+                justify-content: center;
+                text-align: center;
+                margin: 0 - 10px;
+            }
+
+            .card-img-top {
+                justify-content: center;
+                height: 150px; /* Establece una altura fija para las imágenes */
+                object-fit: cover; /* Asegura que la imagen mantenga proporción dentro del contenedor */
+            }
+
+            .card-text {
+                font-size: 1rem;
+                color: #555;
+            }
+
+            /* Estilos básicos para la sección "About Us" */
+            #about-us {
+                background-color: #f7f7f7;
+                padding: 50px 20px;
+                text-align: justify;
+            }
+
+            #about-us h2 {
+                font-size: 2.5rem;
+                text-align: center;
+                margin-bottom: 20px;
+            }
+
+            #about-us p {
+                font-size: 1.2rem;
+                color: #555;
+                line-height: 1.6;
+                max-width: 800px;
+                margin: 0 auto;
+            }
+
+            /*Estilos de los Testimonios*/
+
+            .testimonial {
+                background-color: #f1f1f1;
+                padding: 20px;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            }
+
+            .testimonial p {
+                font-style: italic;
+            }
+
+            .testimonial .author {
+                font-weight: bold;
+                text-align: right;
+            }
+
+            .testimonio {
+            width: 130px;
+            height: 150px;
+            justify-content: center;
+            border-radius: 70px;
+            }
+
+            .sectionPadding {
+                padding: -50px;
+            }
+
+            #EspacioTitulo {
+                margin-top: 150px;
+            }
+
+            #espacio {
+                margin-top: 50px;
+            }
+
+            /*Estilos para las imagenes de la pagina de Galeria*/
+
+            .galeria-img {
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+                object-fit: cover; /* Ajusta la imagen para que se recorte y se ajuste bien dentro de su contenedor */
+            }
+
+            .galeriacard {
+                width: 16rem;
+                margin-bottom: 35px;
+            }
+
+            /*Estilos para el presupuesto*/
+
+            .error {
+                color: red;
+                font-size: 12px;
+            }
+
+            .espacioEntreElementosDelPresupuesto {
+                margin-bottom: 35px;
+            }
+
+            .presupuestoFinal {
+                border: none;
+            }
+
+            .presupuestoFinal:focus {
+                outline: none;
+            }
+
+            #centro {
+                text-align: center;
+            }
+
+            /*Estilos para el mapa*/
+
+            .estilosCalcularRuta {
+                padding-top: 20px;
+            }
+
+            .tarjeta {
+                padding: 10px;
+            }
+
+            .presupuestoFinal {
+                font-size: 1.5rem;
+                color: #c64ae2;
+                font-weight: bold;
+                border: 2px solid #c94ae2;
+                border-radius: 5px;
+                padding: 10px;
+                text-align: center;
+                background-color: #fcfaea2a;
+            }
+
+            /*Estilos para el Footer*/
+            .footer {
+                background-color:rgb(222, 146, 208);
+                color: white;
+                text-align: center;
+                padding: 20px;
+            }
+
+            .social-link {
+                text-decoration: none;
+                color: inherit; /* Para que mantenga el color de la pagina*/
+            }
+
+            .social-link:hover {
+                text-decoration: underline; /* Solo subrayar cuando el cursor pase encima */
+            }
+
+

@@ -37,7 +37,7 @@ function renderizarNavbar() {
                     <img src="${rutaLogo}" alt="Logo" width="100" height="100">
                 </a>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item">
                             <a class="nav-link" id="nav-inicio" href="${rutas.index}">Inicio</a>
                         </li>

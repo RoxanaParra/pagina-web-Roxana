@@ -9,14 +9,13 @@
             <link rel="stylesheet" href="../public/css/estilos.css">
         </head>
         <body>
-
-        <!--El siguiente div define un contenedor preparado para albergar una barra de navegación, 
-        esté div puede ser manipulado a través de Javascript-->
+            <!--El siguiente div define un contenedor preparado para albergar una barra de navegación, 
+            esté div puede ser manipulado a través de Javascript-->
             <div id="navbar" class="nav"></div>
+
             <div class="container mt-5">
-                <h1 class="text-center mb-4" style="margin-top: 140px;"> Presupuesto de Productos</h1>
+                <h1 class="text-center mb-4" id="EspacioTitulo"> Presupuesto de Productos</h1>
                 <form id="presupuestoForm">
-                    
                     <!--Primera Parte: Datos de Contacto-->
                     <div class="card espacioEntreElementosDelPresupuesto">
                         <div class="card-header">
@@ -47,6 +46,7 @@
                     </div>
                     
                     <!--Segunda parte del Presupuesto-->
+                    
                     <div class="card espacioEntreElementosDelPresupuesto">
                         <!--Se crea un encabezado dentro de la tarjeta (card-header)-->
                         <div class="card-header">
@@ -65,6 +65,7 @@
                                     <option value="14.95"> llaveros - 14,95€ </option>
                                     <option value="22.50"> Lapices y agendas - 22,50€ </option>
                                     <option value="20.50"> Almohadas - 20,50€ </option>
+                                    <option value="35.50"> Desayunos - 35,50€ </option>
                                 </select>
                                 <span id="errorProducto" class="error"></span>
                             </div>
@@ -95,6 +96,10 @@
                                     <input class="form-check-input" type="checkbox" id="extra5" value="4.50">
                                     <label class="form-label" for="extra5"> Llaveros con fotos - 4,50€ </label>
                                 </div>
+                                <div class="form-check"> 
+                                    <input class="form-check-input" type="checkbox" id="extra6" value="15">
+                                    <label class="form-label" for="extra6"> Domicilio - 15€ </label>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -115,7 +120,7 @@
                         <label class="form-check-label" for="condiciones">Acepto las condiciones de privacidad</label>
                     </div>
                     <button type="submit" class="btn btn-primary" id="enviarFormulario"> Enviar </button>
-                    <button type="reset" class="btn btn-secundary" id="limpiarFormulario"> Resetear </button> <br><br>
+                    <button type="reset" class="btn btn-secundary" id="limpiarFormulario"> Limpiar </button> <br><br>
                 </form>
             </div>
 

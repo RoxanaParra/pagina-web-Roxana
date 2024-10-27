@@ -24,7 +24,6 @@ function calcularRuta() {
         navigator.geolocation.getCurrentPosition(position => {
             coordinates.lat = position.coords.latitude;
             coordinates.lng = position.coords.longitude;
-            console.log(`Latitude: ${coordinates.lat}, Longitude: ${coordinates.lng}`);
 
             // Añadir un marcador en la ubicación del cliente
             L.marker([coordinates.lat, coordinates.lng]).addTo(map)
