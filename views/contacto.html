@@ -11,12 +11,13 @@
       <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
     </head>
     <body>
+
       <!--El siguiente div define un contenedor preparado para albergar una barra de navegación, 
       esté div puede ser manipulado a través de Javascript-->
       <div id="navbar" class="nav"></div>
       <section id="contacto">
         <div class="container">
-          <h1 class="text-center">Contacto</h1>
+          <h1 class="text-center" id="EspacioTitulo">Contacto</h1>
           <div class="row">
             <div class="col-sm-6 mb-3 mb-sm-0">
               <div class="card">
@@ -31,7 +32,7 @@
             <div class="col-sm-6">
               <div class="card">
                 <div class="tarjeta">
-                  <h5 class="card-title" style="text-align: center;"> <strong>¡Animate y crea Momentos con nosotros!</strong></h5>
+                  <h5 class="card-title" id="centro"> <strong>¡Animate y crea Momentos con nosotros!</strong></h5>
                   <p class="card-text">En "Crea tus Momentos" estamos encantados de ayudarte a crear regalos personalizados y únicos para cualquier ocasión especial.</p>
                   <p class="card-text">
                     Puedes encontrarnos en nuestra página web: <strong>"www.creatusmomentos.com"</strong> donde encontratás una amplia variedad de productos y diseños para elegir.<br>
@@ -44,13 +45,17 @@
           </div>
         </div>
       </section>
+      
       <div id="mapa">
         
         <!--Se define un div que alberga el contenido del mapa, la funcionalidad del mapa
         está en un script denominado "mapaUtil.js", permitiendo la visualización geográfica en la página web -->
         <div id="map"></div>
+
         <br><br>
+
       </div>
+      
       <!---Se define un div que alberga el footer, es manipulado a través de un archivo de Javascript-->
       <div id="footer"></div>
       

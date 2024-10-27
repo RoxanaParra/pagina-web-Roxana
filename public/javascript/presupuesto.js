@@ -185,6 +185,7 @@ function calcularPresupuesto(valor, plazo)
     const extra3 = document.getElementById('extra3');
     const extra4 = document.getElementById('extra4');
     const extra5 = document.getElementById('extra5');
+    const extra6 = document.getElementById('extra6');
 
 
     if (extra1.checked) {
@@ -205,6 +206,10 @@ function calcularPresupuesto(valor, plazo)
 
     if (extra5.checked) {
         valor += parseFloat(extra5.value);
+    }
+
+    if (extra6.checked) {
+        valor += parseFloat(extra6.value);
     }
 
     if(plazo > 0 && plazo <= 3) {

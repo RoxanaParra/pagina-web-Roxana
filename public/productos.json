@@ -46,6 +46,11 @@
     "cuerpo": "Almohada suave con un diseño o mensaje personalizado. Perfecto para descansar con estilo.",
     "imagen": "public/imagenes/Almohadas.jpg",
     "fecha": "2024-09-07"
-    }
+    },
+    "producto9": {
+    "titulo": "Desayuno Clásico",
+    "cuerpo": "Un desayuno tradicional que incluye huevos al gusto, tostadas, zumo de naranja y café.",
+    "imagen": "public/imagenes/desayuno.jpg",
+    "fecha": "2024-10-20"
   }
-
+ }
